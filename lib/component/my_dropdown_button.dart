@@ -30,7 +30,7 @@ class _DropdownButtonState extends State<MyDropdownButton> {
         child: DropdownButton(
             items: items,
             isExpanded: widget.isExpand,
-            value: widget.value??widget.data[0],
+            value: widget.value ?? widget.data[0],
             onChanged: (v) {
               if (widget.onselect != null) {
                 widget.onselect(v);

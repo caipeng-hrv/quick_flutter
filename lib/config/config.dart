@@ -10,9 +10,5 @@ class Config {
   static String baseurl = urls[env];
   static const maxCache = 1000; //htpp请求最大缓存数
   static const expired = 60 * 60 * 24; //缓存过期时间
-  static const searchParam = {
-    'limit': 10,
-    'offset': 0,
-    'total': 0
-  };
+  static const searchParam = {'limit': 10, 'offset': 0, 'total': 0};
 }

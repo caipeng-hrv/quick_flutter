@@ -18,7 +18,7 @@ class SlideButton extends StatefulWidget {
       @required this.child,
       @required this.singleButtonWidth,
       @required this.buttons,
-      this.isClosed=true,
+      this.isClosed = true,
       this.onSlideStarted,
       this.onSlideCompleted,
       this.onSlideCanceled})

@@ -50,15 +50,15 @@ class _ListviewExampleState extends State<ListviewExamplePage> {
                 width: 50,
                 padding: const EdgeInsets.fromLTRB(0, 1, 0, 1),
                 child: GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       buttonParam['onTap']();
                       key.currentState.close();
                     },
                     child: Card(
-                      color: buttonParam['color'],
+                        color: buttonParam['color'],
                         child: Center(
-                      child: Text(buttonParam['name']),
-                    ))));
+                          child: Text(buttonParam['name']),
+                        ))));
           }).toList(),
           child: Container(
             height: 60,
@@ -70,17 +70,19 @@ class _ListviewExampleState extends State<ListviewExamplePage> {
       },
       searchParam: searchParam,
       url: 'notice',
-      onTap: (Map map) async{
+      onTap: (Map map) async {
         print(listIsPressed);
-        if(listIsPressed){
+        if (listIsPressed) {
           return;
-        }else{
+        } else {
           listIsPressed = true;
         }
         await Future.delayed(Duration(seconds: 1));
         PublicWidget.showToast('我被点击了');
         searchParam['type'] = Random().nextInt(5);
-        searchParam['type'] == 0 ? searchParam['type'] = 1:searchParam['type']=searchParam['type'];
+        searchParam['type'] == 0
+            ? searchParam['type'] = 1
+            : searchParam['type'] = searchParam['type'];
         reload = true;
         listIsPressed = false;
         setState(() {});

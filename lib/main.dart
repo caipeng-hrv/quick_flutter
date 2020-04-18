@@ -68,8 +68,7 @@ class _MyAppStata extends State<MyApp> {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: CheckVersionPage(
-          child:HomePage()),
+      home: CheckVersionPage(child: HomePage()),
     );
   }
 }

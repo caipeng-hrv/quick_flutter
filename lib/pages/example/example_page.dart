@@ -28,25 +28,27 @@ class _ExampleState extends State<ExamplePage> {
     {'name': '提交按钮', 'value': 'listview'},
     {'name': '输入框', 'value': 'listview'}
   ];
- 
+
   @override
   Widget build(BuildContext context) {
-     Widget body = Column(
-    // mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      GirdViewButton(datas: datas,onChange: (value){
-        setState(() {
-          name = value;
-        });
-      },),
-      Container(
-        padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-      ),
-      PublicWidget.divider(),
-      Expanded(child: show())
-      
-    ],
-  );
+    Widget body = Column(
+      // mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        GirdViewButton(
+          datas: datas,
+          onChange: (value) {
+            setState(() {
+              name = value;
+            });
+          },
+        ),
+        Container(
+          padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+        ),
+        PublicWidget.divider(),
+        Expanded(child: show())
+      ],
+    );
     return BasePage(title: '例子', body: body).build();
   }
 }

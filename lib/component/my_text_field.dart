@@ -39,9 +39,7 @@ class _MyTextFieldState extends State<MyTextField> {
                   if (widget.onChange != null) {
                     widget.onChange(value);
                   }
-                  setState(() {
-                    
-                  });
+                  setState(() {});
                 },
                 decoration: InputDecoration(
                   contentPadding: const EdgeInsets.fromLTRB(10, 0, 10, 15),
@@ -54,8 +52,7 @@ class _MyTextFieldState extends State<MyTextField> {
                       if (widget.onChange != null) {
                         widget.onChange('');
                       } else {
-                        setState(() {
-                        });
+                        setState(() {});
                       }
                     },
                     child: Image.asset(

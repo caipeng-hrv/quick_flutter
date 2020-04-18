@@ -24,7 +24,6 @@ class Global {
   static List areas;
   static List industrys;
 
-
   // 网络缓存对象
   static NetCache netCache = NetCache();
 

@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 class TimePicker extends StatefulWidget {
   final DateTime date;
   final Function onPick;
-  TimePicker({Key key, this.date,this.onPick});
+  TimePicker({Key key, this.date, this.onPick});
   @override
   _TimePickerState createState() => _TimePickerState();
 }
@@ -21,11 +21,10 @@ class _TimePickerState extends State<TimePicker> {
         lastDate: DateTime(2100),
         locale: Locale("zh"));
     //将选中的值传递出来
-    if(widget.onPick !=null && result != null){
+    if (widget.onPick != null && result != null) {
       widget.onPick(result);
     }
-    setState(() {
-    });
+    setState(() {});
   }
 
   @override
@@ -45,7 +44,8 @@ class _TimePickerState extends State<TimePicker> {
                     // mainAxisAlignment: MainAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        DateFormat('yyyy-MM-dd').format(widget.date??DateTime.now()),
+                        DateFormat('yyyy-MM-dd')
+                            .format(widget.date ?? DateTime.now()),
                         style:
                             TextStyle(fontSize: 13, color: Color(0xff4a4a4a)),
                       ),

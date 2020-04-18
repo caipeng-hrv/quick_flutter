@@ -6,7 +6,6 @@ import 'package:package_info/package_info.dart';
 
 import 'download_progress.dart';
 
-
 class CheckVersionPage extends StatefulWidget {
   final Widget child;
 

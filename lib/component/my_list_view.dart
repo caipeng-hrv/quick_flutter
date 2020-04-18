@@ -14,14 +14,14 @@ class MyListview extends StatefulWidget {
   final String url;
   bool reload;
 
-  MyListview({
-    Key key,
-    @required this.searchParam,
-    @required this.card,
-    @required this.url,
-    @required this.onTap,
-    this.reload
-  }) : super(key: key);
+  MyListview(
+      {Key key,
+      @required this.searchParam,
+      @required this.card,
+      @required this.url,
+      @required this.onTap,
+      this.reload})
+      : super(key: key);
   @override
   _MyListviewState createState() => _MyListviewState();
 }
@@ -34,25 +34,17 @@ class _MyListviewState extends State<MyListview> {
   Map _searchParam = Config.searchParam;
 
   _initParam() {
-    _searchParam = {
-      'limit': 10,
-      'offset': 0,
-      'total': 0
-    };
-    if(widget.searchParam.length>0){
-      widget.searchParam.forEach((
-      key,value
-    ) {
-      if (value != null && value != '') {
-        _searchParam[key] = value;
-      }
-    });
+    _searchParam = {'limit': 10, 'offset': 0, 'total': 0};
+    if (widget.searchParam.length > 0) {
+      widget.searchParam.forEach((key, value) {
+        if (value != null && value != '') {
+          _searchParam[key] = value;
+        }
+      });
     }
-    
   }
 
   Future _loadData([String actionType]) async {
-    
     print('before:$_searchParam');
     Response res = await HttpUtil().getObjects(widget.url, _searchParam);
     if (res.statusCode == 200) {
@@ -97,7 +89,7 @@ class _MyListviewState extends State<MyListview> {
       _initParam();
       _loadData();
     }
-    if (widget.reload??false) {
+    if (widget.reload ?? false) {
       widget.reload = false;
       _initParam();
       _loadData();
@@ -118,7 +110,6 @@ class _MyListviewState extends State<MyListview> {
           await _loadData('load');
         }
         _refreshController.loadComplete();
-
       },
     ));
   }
