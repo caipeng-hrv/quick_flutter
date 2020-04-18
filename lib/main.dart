@@ -54,7 +54,7 @@ class _MyAppStata extends State<MyApp> {
       routes: <String, WidgetBuilder>{
         "home": (context) => HomePage(),
         "login": (context) => LoginPage(),
-        "imagePicker": (context) => ImagePickerWidget(),
+        "imagePicker": (context) => ImagePicker(),
         "personal": (context) => PersonalPage(),
         'browser': (context) => BrowserPage(),
       },

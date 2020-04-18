@@ -2,13 +2,13 @@ import 'package:app/component/public_widget.dart';
 import 'package:flutter/material.dart';
 
 //快速创建一个新页面，复制，然后替换GirdViewButton
-class GirdViewButtonPage extends StatefulWidget {
+class GirdViewButton extends StatefulWidget {
   final List datas;
   final Function onChange;
   final num crossAxisCount;
   final double childAspectRatio;
   final bool isShowStatis;
-  GirdViewButtonPage(
+  GirdViewButton(
       {@required this.datas,
       this.onChange,
       this.crossAxisCount = 3,
@@ -18,7 +18,7 @@ class GirdViewButtonPage extends StatefulWidget {
   _GirdViewButtonState createState() => _GirdViewButtonState();
 }
 
-class _GirdViewButtonState extends State<GirdViewButtonPage> {
+class _GirdViewButtonState extends State<GirdViewButton> {
   num _currentSelectIndex = 0;
   @override
   Widget build(BuildContext context) {

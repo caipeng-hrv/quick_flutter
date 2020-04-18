@@ -34,7 +34,7 @@ class _ExampleState extends State<ExamplePage> {
      Widget body = Column(
     // mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
-      GirdViewButtonPage(datas: datas,onChange: (value){
+      GirdViewButton(datas: datas,onChange: (value){
         setState(() {
           name = value;
         });

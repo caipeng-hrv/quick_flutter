@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class TimePickerPage extends StatefulWidget {
+class TimePicker extends StatefulWidget {
   final DateTime date;
   final Function onPick;
-  TimePickerPage({Key key, this.date,this.onPick});
+  TimePicker({Key key, this.date,this.onPick});
   @override
   _TimePickerState createState() => _TimePickerState();
 }
 
-class _TimePickerState extends State<TimePickerPage> {
+class _TimePickerState extends State<TimePicker> {
   //调起日期选择器
   _showDatePicker() async {
     // 第二种方式：async+await

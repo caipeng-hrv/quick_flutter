@@ -3,12 +3,12 @@ import 'dart:async';
 
 import 'package:multi_image_picker/multi_image_picker.dart';
 
-class ImagePickerWidget extends StatefulWidget {
+class ImagePicker extends StatefulWidget {
   @override
   _ImagePickerState createState() => new _ImagePickerState();
 }
 
-class _ImagePickerState extends State<ImagePickerWidget> {
+class _ImagePickerState extends State<ImagePicker> {
   List<Asset> images = List<Asset>();
   @override
   void initState() {
