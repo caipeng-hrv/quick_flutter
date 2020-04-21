@@ -18,10 +18,10 @@
 
 **常用插件**
 
-1. MyListview 自定义的listview
-2. SlideButton 可滑动的组件，配合MyListview使用
-3. GirdViewButton 多个button组件(单选)
-4. MyDropdownButton 下拉列表组件
-5. ImagePicker 相册组件
-6. TimePicker 日历
+- MyListview 自定义的listview
+- SlideButton 可滑动的组件，配合MyListview使用
+- GirdViewButton 多个button组件(单选)
+- MyDropdownButton 下拉列表组件
+- ImagePicker 相册组件
+- TimePicker 日历
 
