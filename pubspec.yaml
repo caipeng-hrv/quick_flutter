@@ -50,6 +50,8 @@ dependencies:
   multi_image_picker:
   flutter_absolute_path:
   charts_flutter:
+  flutter_alipay:
+  fluwx:
 
 
 dev_dependencies:

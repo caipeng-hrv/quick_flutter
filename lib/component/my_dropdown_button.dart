@@ -16,6 +16,13 @@ class MyDropdownButton extends StatefulWidget {
 }
 
 class _DropdownButtonState extends State<MyDropdownButton> {
+  var value;
+  @override
+  void initState() {
+    super.initState();
+    value = widget.value ?? widget.data[0]['value'];
+  }
+
   @override
   Widget build(BuildContext context) {
     List<DropdownMenuItem> items = [];
@@ -30,8 +37,9 @@ class _DropdownButtonState extends State<MyDropdownButton> {
         child: DropdownButton(
             items: items,
             isExpanded: widget.isExpand,
-            value: widget.value ?? widget.data[0],
+            value: value,
             onChanged: (v) {
+              value = v;
               if (widget.onselect != null) {
                 widget.onselect(v);
               }
